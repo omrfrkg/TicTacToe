@@ -244,6 +244,25 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        if (winScorePlayerOne == 3){
+            Toast.makeText(this@MainActivity,"Oyunu 1.Player Kazandı!",Toast.LENGTH_LONG).show()
+            winScorePlayerOne = 0
+            winScorePlayerTwo = 0
+
+            var intent = intent
+            finish()
+            startActivity(intent)
+        }
+        else if(winScorePlayerTwo == 3){
+            Toast.makeText(this@MainActivity,"Oyunu 2.Player Kazandı!",Toast.LENGTH_LONG).show()
+            winScorePlayerOne = 0
+            winScorePlayerTwo = 0
+
+            var intent = intent
+            finish()
+            startActivity(intent)
+        }
+
     }
 
     fun winningMove(mainString: String, searchedString: String): Boolean {
@@ -279,7 +298,6 @@ class MainActivity : AppCompatActivity() {
 
         winStatus = false
         roundCounter  = 0
-
     }
 
 }
